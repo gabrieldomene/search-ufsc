@@ -1,19 +1,29 @@
-<div class="container-fluid">
-    <h1>Busca de salas CFH</h1>
-    <p>Welcome to {{title}}</p>
+<div class="container">
+    <h1 class="text-center display-2 mb-5">Pesquisa de salas - CFH</h1>
 
-    <p>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Como usar?
-  </button>
-</p>
-    <div class="collapse" id="collapseExample">
-        <div class="card border-primary mb-3">
-            <div class="card-body text-primary">
-                <p class="card-text">Para utilizar a busca de salas basta apenas digitar o identificador da matéria ou o nome completo da disciplina e clicar em buscar.</p>
-            </div>
+    <form action="/getNomeDisciplina" method="post">
+        <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
+            <input type="text" class="form-control col-md-6" id="nomeDisciplina" aria-describedby="" placeholder="Tópicos Especiais I" name="nomeDisciplina">
+            <button class="btn btn-outline-primary form-control col-md-2" type="submit" id="button-addon1">Pesquisar</button>
+        </div>
+    </form>
+
+    <div class="input-group justify-content-center mt-3 mb-3">
+        <h2 class="text-center">OU</h2>
+    </div>
+    <form action="/getIdDisciplina" method="post">
+        <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
+            <input type="text" class="form-control col-md-6" name="IdDisciplina" placeholder="CFH8370" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-primary form-control col-md-2" type="submit" id="button-addon2">Pesquisar</button>
+        </div>
+    </form>
+
+    <div class="card border-primary mt-5">
+        <div class="card-body text-primary">
+            <h5 class="card-title">Como utilizar a busca de salas?</h5>
+            <p class="card-text">Se você ainda tem dúvida em qual sala está ocorrendo sua aula basta apenas digitar o nome da disciplina ou então
+                o identificador dela. Após pesquisar a disciplina inserida o sistema retornará o local correto dela. Lembre-se
+                de digitar corretamente o nome e o identificador, caso contrário não será possível achar a sala.</p>
         </div>
     </div>
 </div>
-
-
