@@ -3,8 +3,8 @@
 
     <form action="/getNomeDisciplina" method="post">
         <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
-            <input type="text" class="form-control col-md-6" id="nomeDisciplina" aria-describedby="" placeholder="Tópicos Especiais I" name="nomeDisciplina">
-            <button class="btn btn-outline-primary form-control col-md-2" type="submit" id="button-addon1">Pesquisar</button>
+            <input type="text" class="form-control col-md-6" id="nomeDisciplina" aria-describedby="" placeholder="Tópicos Especiais I" name="nomeDisciplina" disabled>
+            <button class="btn btn-outline-primary form-control col-md-2" type="submit" id="button-addon1" disabled>Pesquisar</button>
         </div>
     </form>
 
@@ -13,7 +13,7 @@
     </div>
     <form action="/getIdDisciplina" method="post">
         <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
-            <input type="text" class="form-control col-md-6" name="IdDisciplina" placeholder="CFH8370" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <input type="text" class="form-control col-md-6" name="IdDisciplina" placeholder="CFH8370" aria-label="Recipient's username" aria-describedby="button-addon2" required>
             <button class="btn btn-outline-primary form-control col-md-2" type="submit" id="button-addon2">Pesquisar</button>
         </div>
     </form>
