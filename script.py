@@ -31,11 +31,12 @@ for i in range(len(new_lista)):
 
 print('Len antiga: ', len(new_lista))
 
-data = {'posicao' : []}
-
-for i in range (len(lista_json)):
+data = {}
+data['relacao'] = []
+for i in range (len(lista_json)):	
 	temp = lista_json[i]
-	data.get('posicao').insert({'Sala': temp[0], 'Disciplina': temp[1]})
+	item = {"sala": temp[0], "disciplina" : temp[1]}
+	data['relacao'].append(item)
 print(data)
 
 with open('last_file.json', 'w') as fp:
