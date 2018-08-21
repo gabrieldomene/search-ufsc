@@ -18,6 +18,20 @@
         </div>
     </form>
 
+    {{#if condicao}}
+    {{#each resultado}}
+        
+    <div class="alert alert-success col-md-8 mx-auto" role="alert">Disciplina encontrada na sala: {{this}}
+    </div>
+    {{/each}}
+    {{else}}
+        {{#if condicao2}}
+    <div class="alert alert-danger col-md-8 mx-auto" role="alert">Disciplina ({{disciplina}}) não encontrada, verifique novamente!
+    </div>
+        {{/if}}
+    {{/if}}
+
+
     <div class="card border-primary mt-5">
         <div class="card-body text-primary">
             <h5 class="card-title">Como utilizar a busca de salas?</h5>
