@@ -15,39 +15,29 @@ router.post('/getNomeDisciplina', function(req, res, next) {
 
 router.post('/getIdDisciplina', function(req, res, next){
   var idDisc = req.body.IdDisciplina;
-  /* let myReadStream = fs.createReadStream('lista-arquivo.txt', 'utf8'); */
-
-  console.log(jsonBD);
-  /* let vetor = [];
-  myReadStream.on('data', function(chunk){
-    console.log('new chunk received');
-    for(let i = 0; i < chunk.length; i++){
-      if(chunk[i] == '\\' || chunk[i] == 'n' || chunk[i] == 'r'){
-        continue
-      }else{
-        vetor.push(chunk[i]);
+  idDisc = idDisc.toUpperCase();
+  var arrayRes = [];
+  for (let i = 0; i < jsonBD.relacao.length; i++)
+  {
+    if(jsonBD.relacao[i].disciplina == idDisc){
+      if(arrayRes.indexOf(jsonBD.relacao[i].sala) === -1); //conferir porque nao funcionou
+      {
+        arrayRes.push(jsonBD.relacao[i].sala);
       }
     }
-  }); */
+  }
+  let new_array = Array.from(new Set(arrayRes))
 
-
-  /* fs.open('lista-arquivo.txt', 'r', function(err, fd){
-    if (err) throw err;
-    else{
-      fs.readFile('lista-arquivo.txt', 'utf8', function(err, data){
-        if (err) throw err;
-        else{
-          let aux = []
-          aux.push(data)
-          console.log(aux);
-        }
-      });
-      fs.close(fd, (err) =>{
-        if (err) throw err;
-      });
-    }
-  }); */
-  res.render('index');
+  if(arrayRes.length > 0)
+  {
+    var condicao = 1;
+    var condicao2 = 0;
+    var resultado = new_array;
+  }
+  else{
+    condicao2 = 1;
+  }
+  res.render('index', {condicao: condicao, condicao2 : condicao2, resultado : resultado, disciplina : idDisc});
 });
 
 module.exports = router;
