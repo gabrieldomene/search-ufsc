@@ -20,13 +20,13 @@ router.post('/getIdDisciplina', function(req, res, next){
   for (let i = 0; i < jsonBD.relacao.length; i++)
   {
     if(jsonBD.relacao[i].disciplina == idDisc){
-      if(arrayRes.indexOf(jsonBD.relacao[i].sala) === -1); //conferir porque nao funcionou
+      if(arrayRes.indexOf(jsonBD.relacao[i].sala) === -1); //this should have done the 'MAGIC'
       {
         arrayRes.push(jsonBD.relacao[i].sala);
       }
     }
   }
-  let new_array = Array.from(new Set(arrayRes))
+  let new_array = Array.from(new Set(arrayRes));
 
   if(arrayRes.length > 0)
   {
