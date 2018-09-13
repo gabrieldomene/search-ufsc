@@ -1,7 +1,7 @@
 <div class="container">
-    <h1 class="text-center display-2 mb-5">Pesquisa de salas - CFH</h1>
+    <h1 class="text-center display-3 mb-5">Pesquisa de salas - CFH</h1>
 
-    <form action="/getNomeDisciplina" method="post">
+    {{!-- <form action="/getNomeDisciplina" method="post">
         <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
             <input type="text" class="form-control col-md-6" id="nomeDisciplina" aria-describedby="" placeholder="Tópicos Especiais I"
                 name="nomeDisciplina" disabled>
@@ -11,12 +11,12 @@
 
     <div class="input-group justify-content-center mt-3 mb-3">
         <h2 class="text-center">OU</h2>
-    </div>
+    </div> --}}
     <form action="/getIdDisciplina" method="post">
         <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
             <input type="text" class="form-control col-md-6" name="IdDisciplina" placeholder="Ex: MEN7027" aria-label="Recipient's username"
-                aria-describedby="button-addon2" required>
-            <button class="btn btn-outline-primary form-control col-md-2" type="submit" id="button-addon2">Pesquisar</button>
+                aria-describedby="button-addon2" oninvalid="this.setCustomValidity('Insira uma disciplina')" oninput="this.setCustomValidity('')"required>
+            <button class="btn btn-primary form-control col-md-2" type="submit" id="button-addon2">PESQUISAR</button>
         </div>
     </form>
 
@@ -34,7 +34,7 @@
     {{/if}} {{/if}}
 
 
-<div class="card border-primary mt-5">
+<div class="card border-light mt-5">
     <div class="card-body text-primary">
         <h5 class="card-title">Como utilizar a busca de salas?</h5>
         <p class="card-text">Se você ainda tem dúvida em qual sala está ocorrendo sua aula basta apenas digitar o nome da disciplina ou então
