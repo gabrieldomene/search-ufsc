@@ -1,9 +1,36 @@
 body {
   padding: 20px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #EEF8FF;
+  background: #3373C1;
 }
 
-.card-body{
-  background: #EEF8FF;
+.border-light{
+  border-color: #52AFE5;
+  background: #224D81;
+}
+h1,h5{
+  font-family: 'Roboto', sans-serif;
+  font-bold: 500;
+  color: #fff;
+}
+
+p{
+  font-family: 'Raleway', sans-serif;
+  font-bold: 500;
+  color: #fff;
+}
+
+#button-addon2{
+  border: none;
+  background-color: #26C196;
+  color: #FFF;
+  font-size: 1.3em;
+}
+
+input[type="text"], textarea {
+  outline: none;
+  box-shadow:none !important;
+  border:1px solid #fff !important;
+}
+input[type="text"]:active{
+  color: #224d81;
 }
