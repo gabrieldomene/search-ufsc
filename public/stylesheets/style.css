@@ -1,36 +1,84 @@
 body {
   padding: 20px;
-  background: #3373C1;
+  background: #EEF8FF;
 }
 
 .border-light{
-  border-color: #52AFE5;
-  background: #224D81;
+  border: 1px solid #224D81 !important;
+  background: #EEF8FF;
 }
-h1,h5{
+h1{
   font-family: 'Roboto', sans-serif;
-  font-bold: 500;
-  color: #fff;
+  font-weight: 500;
+  color: #224D81;
 }
 
-p{
+.modal-content{
+  background: #EEF8FF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #224D81;
+}
+
+h5, p{
   font-family: 'Raleway', sans-serif;
-  font-bold: 500;
-  color: #fff;
+  font-weight: 500;
+  color: #224D81;
 }
 
 #button-addon2{
   border: none;
   background-color: #26C196;
-  color: #FFF;
+  color: #EEF8FF;
   font-size: 1.3em;
+  transition: all 1s ease;
+}
+#button-addon2:hover{
+  border: 1px solid #26C196;
+  background-color: #1C8E6E;
+  color: #fff;
+  font-size: 1.3em;
+  box-shadow: inset 300px 0 0 0 #1C8E6E;
 }
 
 input[type="text"], textarea {
   outline: none;
   box-shadow:none !important;
-  border:1px solid #fff !important;
+  border:1px solid #224D81 !important;
 }
 input[type="text"]:active{
   color: #224d81;
+}
+
+.btn-lcc {
+  background-color: #224D81;
+  border: 1px solid #EEF8FF;
+  transition: all 1s ease;
+}
+.btn-lcc:hover{
+  background-color: #EEF8FF;
+  border: 1px solid #224d81;
+  color: #224d81;
+  box-shadow: inset 100px 0 0 0 #EEF8FF;
+}
+
+.btn-close{
+  background-color: #FB4D48;
+  border: 1px solid #EEF8FF;
+  transition: all 1s ease;
+
+}
+.btn-close:hover{
+  background-color: #EEF8FF;
+  border: 1px solid #FB4D48;
+  color: #FB4D48;
+  box-shadow: inset 100px 0 0 0 #EEF8FF;
+}
+
+.card-text{
+  font-size: 1.1em;
+}
+
+.card-title{
+  font-weight: 700;
 }
