@@ -1,5 +1,31 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary float-sm-right btn-lcc" data-toggle="modal" data-target="#exampleModalCenter">
+  Desenvolvido por LCC
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLongTitle">Laboratório de Computação Científica</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Estre projeto foi desenvolvido pela equipe do Laboratório de Computação Científica do Centro de Ciências, Tecnologias e Saúde com sede em Araranguá - Santa Catarina e apoiado pelo Centro de Filosofia e Ciências Humanas (CFH);
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal">Fechar</button>
+        <a class="btn btn-primary btn-lcc" href="http://lgcc.paginas.ufsc.br/" role="button">Visitar LCC</a>
+      </div>
+    </div>
+  </div>
+</div> 
 <div class="container">
-    <h1 class="text-center display-3 mb-5">Pesquisa de salas - CFH</h1>
+
+    <h1 class="text-center display-3 mb-5">Pesquisa de salas</h1>
 
     {{!-- <form action="/getNomeDisciplina" method="post">
         <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
@@ -15,33 +41,44 @@
     <form action="/getIdDisciplina" method="post">
         <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
             <input type="text" class="form-control col-md-6" name="IdDisciplina" placeholder="Ex: MEN7027" aria-label="Recipient's username"
-                aria-describedby="button-addon2" oninvalid="this.setCustomValidity('Insira uma disciplina')" oninput="this.setCustomValidity('')"required>
+                aria-describedby="button-addon2" oninvalid="this.setCustomValidity('Insira uma disciplina')" oninput="this.setCustomValidity('')"
+                required>
             <button class="btn btn-primary form-control col-md-2" type="submit" id="button-addon2">PESQUISAR</button>
         </div>
     </form>
 
-    {{#if condicao}} 
-        {{#each resultado}}
-            <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
-                <div class="alert alert-success col-md-8 mx-auto text-center" role="alert">Disciplina encontrada na sala: {{this}}</div>
-            </div>
-    {{/each}} 
-    {{else}} 
-        {{#if condicao2}}
-            <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
-                <div class="alert alert-danger col-md-8 mx-auto text-center" role="alert">Disciplina ({{disciplina}}) não encontrada, verifique novamente!</div>
-            </div>
+    {{#if condicao}}
+    {{#each resultado}}
+    <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
+        <div class="alert alert-success col-md-8 mx-auto text-center" role="alert">Disciplina encontrada na sala:
+            {{this}}</div>
+    </div>
+    {{/each}}
+    {{else}}
+    {{#if condicao2}}
+    <div class="input-group mb-3 mt-3 input-group-lg col-md-12 justify-content-center">
+        <div class="alert alert-danger col-md-8 mx-auto text-center" role="alert">Disciplina ({{disciplina}}) não
+            encontrada, verifique novamente!</div>
+    </div>
     {{/if}} {{/if}}
 
 
-<div class="card border-light mt-5">
-    <div class="card-body text-primary">
-        <h5 class="card-title">Como utilizar a busca de salas?</h5>
-        <p class="card-text">Se você ainda tem dúvida em qual sala está ocorrendo sua aula basta apenas digitar o nome da disciplina ou então
-            o identificador dela. Após pesquisar a disciplina inserida o sistema retornará o local correto, entretando se
-            possuir duas ou mais salas, elas também serão exibidas. Lembre-se de digitar corretamente o nome e/ou identificador,
-            caso contrário não será possível achar a sala.</p><br>
-        <p>Salas com mais de uma sala alocada irá retornar todas as ocorrências, verifique junto ao cagr qual sala está alocada para o dia da semana.</p>
+    <div class="card border-light mt-5 justify-content-center">
+        <div class="card-body text-primary col-md-12">
+            <h5 class="card-title">Como utilizar a busca de salas?</h5>
+            <p class="card-text"><br>Se você ainda tem dúvida em qual sala está ocorrendo sua aula basta apenas digitar o
+                nome da disciplina ou então
+                o identificador dela. Após pesquisar a disciplina inserida o sistema retornará o local correto,
+                entretando se
+                possuir duas ou mais salas, elas também serão exibidas.
+                <br><br>
+                Lembre-se de digitar corretamente o nome e/ou
+                identificador,
+                caso contrário não será possível achar a sala.
+                <br><br>
+                Todas as salas alocadas a uma disciplina serão devolvidas</p>
+        </div>
     </div>
-</div>
+
+
 </div>
