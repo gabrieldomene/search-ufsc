@@ -42,6 +42,10 @@ app.use(function(err, req, res, next) {
 
 app.post('/getNomeDisciplina', usersRouter);
 app.post('/getIdDisciplina', usersRouter);
+app.get('/robots.txt', function (req, res) {
+  res.type('text/plain');
+  res.sendFile('robots')
+});
 app.use(function(req, res) {
   res.render('404', {title:'ERROR'});
 });
