@@ -40,4 +40,5 @@ router.post('/getIdDisciplina', function(req, res, next){
   res.render('index', {condicao: condicao, condicao2 : condicao2, resultado : resultado, disciplina : idDisc});
 });
 
+
 module.exports = router;
